@@ -29,8 +29,8 @@ jobs:
 
       - name: Check imports
         run: |
-          python -C "from src.model import predict_salary"
-          python -C "from src.data_validation import validate_experience"
+          python -c "from src.model import predict_salary"
+          python -c "from src.data_validation import validate_experience"
 
       - name: Run automated tests
         run: python -m pytest -v
