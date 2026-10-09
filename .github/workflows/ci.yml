@@ -32,6 +32,10 @@ jobs:
           python -c "from src.model import predict_salary"
           python -c "from src.data_validation import validate_experience"
 
+      - name: Train ML model
+        run: |
+          python src/train.py
+
       - name: Run automated tests
         run: python -m pytest -v
 
