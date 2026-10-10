@@ -36,6 +36,6 @@ jobs:
         run: |
           python src/train.py
 
-      - name: Run automated tests
+      - name: Run model and API tests
         run: python -m pytest -v
 
