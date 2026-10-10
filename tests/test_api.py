@@ -44,4 +44,4 @@ def test_model_info_endpoint():
     
     assert response.status_code == 200
     assert response.json()["model_type"] == "LinearRegression"
-    assert response.json()["purpose"]=="Salary prediction"
+    assert response.json()["purpose"]=="Salary Prediction"
