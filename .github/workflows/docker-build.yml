@@ -25,5 +25,5 @@ jobs:
         with:
           context: . 
           push: false
-          tags: mlops-cicd-practical:'latest'
+          tags: mlops-cicd-practical:latest
      
