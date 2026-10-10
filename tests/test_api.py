@@ -38,3 +38,10 @@ def test_string_experience_rejected():
         json={"experience":"five"}
     )
     assert response.status_code == 422
+
+def test_model_info_endpoint():
+    response=client.get("/model-info")
+    
+    assert response.status_code == 200
+    assert response.json()["model_type"] == "LinearRegression"
+    assert response.json()["purpose"]=="Salary Prediction"

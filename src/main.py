@@ -31,3 +31,10 @@ def predict(request: PredictionRequest):
         }
     except (ValueError,TypeError) as error :
         raise HTTPException(status_code=400, detail=str(error)) from error 
+    
+@app.get("/model-info")
+def model_info():
+    return {
+        "model_type":"LinearRegression",
+        "purpose":"Salary Prediction"
+    }
